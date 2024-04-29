@@ -10,6 +10,15 @@ export function listCafeDaManha() {
   };
 }
 
+export function listCafeDaManhaByData(data) {
+  return {
+    url: API_URL + `cafemanha/por-data?data=${data}`,
+    options: {
+      method: 'GET',
+    },
+  };
+}
+
 export function adicionarCafeDaManha(body) {
   return {
     url: API_URL + 'cafemanha',
@@ -23,9 +32,18 @@ export function adicionarCafeDaManha(body) {
   };
 }
 
-export function atualizarCafeDaManha(body) {
+export function atualizarCafeDaManha(id) {
   return {
-    url: API_URL + `api/cafe-da-manha/atualizar`,
+    url: API_URL + `cafemanha/${id}`,
+    options: {
+      method: 'PATCH',
+    },
+  };
+}
+
+export function atualizarCafeDaManhaEntrega(body) {
+  return {
+    url: API_URL + `cafedamanha/atualizar`,
     options: {
       method: 'PUT',
       headers: {
@@ -38,7 +56,7 @@ export function atualizarCafeDaManha(body) {
 
 export function deleteCafe(id) {
   return {
-    url: API_URL + `api/cafe-da-manha/excluir/${id}`,
+    url: API_URL + `cafemanha/${id}`,
     options: {
       method: 'DELETE',
     },

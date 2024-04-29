@@ -45,3 +45,12 @@ label {
   transition: 0.3s;
   background-color: #06b80f6c;
 }
+
+.success-card {
+  background-color: #d4edda; 
+  color: #155724; 
+  padding: 10px 20px;
+  border-radius: 5px; 
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb; 
+}
